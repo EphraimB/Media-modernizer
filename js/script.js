@@ -1,6 +1,7 @@
 var upload = document.getElementById("upload");
 var result = document.getElementById("result");
 
+var resolutionOfUploadedFile = document.getElementById("resolutionOfUploadedFile");
 var sizeOfUploadedFile = document.getElementById("sizeOfUploadedFile");
 var inputtedFile = document.getElementById("inputtedFile");
 
@@ -14,7 +15,8 @@ inputtedFile.onchange = function()
 
         inputtedImage.onload = function()
         {
-            sizeOfUploadedFile.innerHTML = inputtedImage.width + " x " + inputtedImage.height;
+            resolutionOfUploadedFile.innerHTML = "Resolution: " + inputtedImage.width + " x " + inputtedImage.height;
+            sizeOfUploadedFile.innerHTML = "Size: " + inputtedImage.size;
         };
 
         inputtedImage.src = fr.result;
